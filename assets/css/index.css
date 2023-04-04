@@ -1,0 +1,117 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+}
+
+input {
+    outline: none;
+}
+
+/* Header starts */
+
+.header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background-color: transparent;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+}
+
+.header .banner {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header .banner img {
+    width: 150px;
+}
+
+.header .navigations {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header .navigations nav a {
+    margin-right: 25px;
+    font-size: 13px;
+    color: #ffff;
+}
+
+.header .navigations nav .nav_active {
+    color: #ff5252;
+}
+
+@media screen and (max-width: 767px) {
+    .header .navigations nav {
+        display: none;
+    }
+
+    .header .navigations .menu {
+        display: flex;
+    }
+}
+
+/* Header ends */
+
+/* Landing starts */
+
+.cont {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: #ff5252;
+}
+
+.hero_bg {
+    width: 100%;
+    background: url('../img/blob-scene-haikei-ver.svg');
+    background-size: 100vw;
+}
+
+@media screen and (max-width: 1024px) {
+    .hero_bg {
+        background: url('../img/blob-1024.svg');
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .hero_bg {
+        background: url('../img/blob-768.svg');
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .hero_bg {
+        background: url('../img/blob-675.svg');
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .hero_bg {
+        background: url('../img/blob-425.svg');
+    }
+}
+
+/* Landing ends */
