@@ -41,13 +41,14 @@
 
 <body>
     <!-- Header starts -->
-    <header class="header">
+    <header class="navigation header">
         <div class="banner">
-            <a href="#start">
-                <img src="./assets/img/banner.png" alt="Thintry: Crafting Digital Perfection">
+            <a href="#start" class="navbar-brand">
+                <img loading="prelaod" decoding="async" class="img-fluid" src="./assets/img/banner.png"
+                    alt="Thintry: Crafting Digital Perfection">
             </a>
         </div>
-        <div class="navigations">
+        <div class="navigations navbar">
             <nav>
                 <a href="#start" class="nav_active">HOME</a>
                 <a href="#aboutus">ABOUT US</a>
@@ -58,7 +59,8 @@
             </nav>
             <div class="menu">
                 <div class="menu-btn">
-                    <button id="menu_btn">
+                    <button id="menu_btn" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu_nv"
+                        aria-controls="menu_nv" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="material-icons">
                             menu
                         </span>
@@ -69,7 +71,7 @@
     </header>
     <!-- Header ends -->
     <!-- Menu starts -->
-    <nav class="menu-nav" id="menu_nv">
+    <nav class="menu-nav collapse navbar-collapse" id="menu_nv">
         <a href="#start" class="nav_active">HOME</a>
         <a href="#aboutus">ABOUT US</a>
         <a href="#services">SERVICES</a>
@@ -79,18 +81,21 @@
     </nav>
     <!-- Menu ends -->
     <!-- Landing starts -->
-    <section>
-        <div class="cont">
-            <div class="hero_bg">
-                <div class="containe">
-                <div class="contetn_area">
-                    <h1 class="content_caption">Crafting Digital Perfection</h1>
-                    <p>Thintry inc.</p>
-                    <a href="#aboutus">Discover More</a>
+    <section class="banneer bg-tertiary position-relative overflow-hidden hero_bg">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="lrl col-lg-6 mb-5 mb-lg-0">
+                    <div class="block text-center text-lg-start pe-0 pe-xl-5">
+                        <h1 class="text-capitalize mb-4">Crafting Digital Perfection</h1>
+                        <p class="mb-4">Thintry inc.</p> <a type="button" class="btn btn-primary"
+                            href="#services">Discover More<span style="font-size: 18px; "
+                                class="ms-2 material-icons">chevron_right</span></a>
+                    </div>
                 </div>
-                <div class="cont_image">
-                    <img src="./assets/img/pc.png" alt="">
-                </div>
+                <div class="col-lg-6">
+                    <div class="ps-lg-5 text-center">
+                        <img loading="lazy" decoding="async" src="./assets/img/pc.png" alt="banner image" class="w-100">
+                    </div>
                 </div>
             </div>
         </div>
