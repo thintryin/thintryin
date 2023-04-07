@@ -1,5 +1,6 @@
 let menuBtn = document.getElementById('menu_btn');
 let navBar = document.getElementById('menu_nv');
+let sections = document.querySelectorAll('section[id]');
 
 menuBtn.addEventListener("click", () => {
     navBar.classList.toggle('power-on');
@@ -8,7 +9,12 @@ menuBtn.addEventListener("click", () => {
     } else {
         menuBtn.innerHTML = '<span class="material-icons">close</span>';
     }
-})
+});
+
+const hideNav = () => {
+    navBar.classList.remove('power-on');
+    menuBtn.innerHTML = '<span class="material-icons">menu</span>';
+}
 
 const changeClass = (className) => {
     let elements = document.querySelectorAll('.nav_active');
@@ -16,30 +22,24 @@ const changeClass = (className) => {
         element.classList.remove('nav_active');
     });
     let el = document.querySelectorAll('.' + className);
-    console.log(className)
-    console.log(el)
     el.forEach(element => {
         element.classList.add('nav_active');
     });
-}
+};
 
 let changeNav = () => {
-    if (location.href.endsWith('#start')) {
-        return changeClass('home');
-    }
-    if (location.href.endsWith('#aboutus')) {
-        return changeClass('aboutus');
-    }
-    if (location.href.endsWith('#services')) {
-        return changeClass('services');
-    }
-    if (location.href.endsWith('#projects')) {
-        return changeClass('projects');
-    }
-    if (location.href.endsWith('#contact')) {
-        return changeClass('contact');
-    }
-}
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - navBar.offsetHeight;
+        const sectionHeight = section.offsetHeight;
+        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+            const id = section.getAttribute('id');
+            return changeClass(id);
+        }
+    });
+};
 
-window.onhashchange = changeNav;
-window.onload = changeNav;
+window.addEventListener('scroll', changeNav);
+window.addEventListener('resize', changeNav);
+window.addEventListener('load', changeNav);
+window.addEventListener('hashchange', changeNav);
+window.addEventListener('scroll', hideNav);

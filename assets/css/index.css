@@ -297,31 +297,6 @@ button:active:focus {
     }
 }
 
-/*@media screen and (max-width: 1024px) {
-    .hero_bg {
-        background: url('../img/blob-1024.svg');
-    }
-}
-
-@media screen and (max-width: 769px) {
-    .hero_bg {
-        background: url('../img/blob-768.svg');
-        background-size: 100%;
-    }
-}
-
-@media screen and (max-width: 675px) {
-    .hero_bg {
-        background: url('../img/blob-675.svg');
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .hero_bg {
-        background: url('../img/blob-425.svg');
-    }
-}*/
-
 /* Landing ends */
 
 h1,
@@ -470,14 +445,12 @@ p.awesome_line {
 }
 
 .item:hover {
-    background: #ff5252;
     -webkit-transition: all .5s ease 0;
     transition: all 0.5s ease 0s;
 }
 
 .item:hover .item,
 .item:hover span.icon {
-    background: #fff;
     border-radius: 10px;
     -webkit-transition: all .5s ease 0;
     transition: all .5s ease 0;
@@ -486,7 +459,6 @@ p.awesome_line {
 
 .item:hover h6,
 .item:hover p {
-    color: #fff;
     -webkit-transition: all .5s ease 0;
     transition: all .5s ease 0;
     transition: all 0.5s ease 0s;
@@ -674,7 +646,9 @@ ul {
 }
 
 .team__item:hover .team__text {
-    top: 0
+    top: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.541);
 }
 
 .team__item:hover .team__text .team__title {
@@ -714,7 +688,8 @@ ul {
     padding: 35px 30px 30px;
     -webkit-transition: .5s;
     -o-transition: .5s;
-    transition: .5s
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.541);
 }
 
 .team__text .team__title {
@@ -963,4 +938,145 @@ ul {
 
 .thintry {
     color: #ff5252;
+}
+
+
+.contactForm {
+    width: calc(100% - 20px);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* STYLES FOR FORM */
+.contactForm form {
+    width: 100%;
+    display: grid;
+    grid-gap: 30px;
+    padding-top: 20px;
+}
+
+.inputGroup {
+    width: 100%;
+    position: relative;
+}
+
+.inputGroup1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.inputGroup2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.inputGroup3 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.inputGroup4 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.inputGroup5 {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+
+.inputGroup6 {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+}
+
+.inputGroup7 {
+    grid-column: 2;
+    grid-row: 5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.inputGroup__textfield {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    font-size: 13px;
+    padding: 20px;
+    border: 1px solid #FFF;
+    outline: 0;
+    border-radius: 0;
+    transition: border 0.3s ease-in-out;
+
+}
+
+.inputGroup__textfield:focus,
+.inputGroup__textfield:active {
+    border: 1px solid #D9D9D9;
+}
+
+
+.inputGroup button {
+    padding: 20px;
+    width: 50%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: #001220;
+    cursor: pointer;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.inputGroup button:hover {
+    box-shadow: 0px 10px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* STYLES FOR VALIDATION WARNING */
+.hf-warning {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    transform: translate(-15%, -50%) !important;
+    background: orangered !important;
+    display: inline-block !important;
+    padding: 7px 14px !important;
+    color: #FFFFFF !important;
+    font-size: 11px !important;
+    font-family: sans-serif;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.1) !important;
+    border: 0 !important;
+    border-radius: 2px !important;
+}
+
+.hf-warning:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: orangered;
+    position: absolute;
+    z-index: 1;
+    bottom: -5px;
+    right: 15px;
+    transform: rotate(45deg);
+}
+
+
+@media screen and (max-width: 480px) {
+    form {
+        display: flex !important;
+        flex-wrap: wrap;
+    }
+
+    form>div {
+        margin-bottom: 30px;
+    }
 }

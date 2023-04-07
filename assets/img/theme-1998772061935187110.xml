@@ -3197,7 +3197,7 @@ body#layout #hidden{display:none!important}
 /*! pbtMenu by Pro Blogger Templates | v1.5.0 - https://probloggertemplates.com */
 !function(a){a.fn.pbtMenu=function(){return this.each(function(){const b=a(this),c=b.find("a"),d=c.length;function e(e,h,f,g){for(let a=0;a<h;a++){const c=e.eq(a),d=c.text(),b="_";if(d.charAt(0)!==b){const i=e.eq(a+1),j=i.text();j.charAt(0)===b&&(g=c.parent()).append('<ul class="sub-menu sm-'+f+'"/>')}d.charAt(0)===b&&c.text(d.replace(b,"")).parent().appendTo(g.children(".sm-"+f))}}e(c,d,1),e(c,d,2),b.find(".sub-menu").parent("li").addClass("has-sub"),b.children(".widget").addClass("is-ready")})}}(jQuery);
 
-/*! jQuery replaceText | v1.1.0 - https://benalman.com/projects/jquery-replacetext-plugin */
+/*! jQuery replaceText | v1.1.0 - https://benalman.com/teams/jquery-replacetext-plugin */
 !function(a){a.fn.replaceText=function(a,b,c){return this.each(function(){var g,e,d=this.firstChild,f=[];if(d)do 3===d.nodeType&&(e=(g=d.nodeValue).replace(a,b))!==g&&(!c&&/</.test(e)?($(d).before(e),f.push(d)):d.nodeValue=e);while(d=d.nextSibling)f.length&&$(f).remove()})}}(jQuery);
 //]]>
 </b:tag>
