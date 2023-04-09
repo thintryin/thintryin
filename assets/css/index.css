@@ -240,8 +240,8 @@ button:active:focus {
 }
 
 .btn {
-    background-color: #001220 !important;
-    color: #ffff !important;
+    background-color: #ff5252 !important;
+    color: #001220 !important;
 }
 
 .btn:hover {
