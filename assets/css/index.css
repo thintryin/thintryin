@@ -60,6 +60,7 @@ input {
     margin-right: 25px;
     font-size: 13px;
     color: #ffff;
+    transition: color 0.3s ease-in;
 }
 
 .header .navigations nav .nav_active {
@@ -124,10 +125,12 @@ button:active:focus {
     display: flex;
     align-items: center;
     font-size: 15px;
+    transition: color 0.3s ease-in;
 }
 
 .navbar nav a:hover {
     color: #ff5252;
+    transition: color 0.3s ease-out;
 }
 
 .menu-nav a:hover {
@@ -139,6 +142,7 @@ button:active:focus {
     display: flex;
     align-items: center;
     font-size: 15px;
+    transition: color 0.3s ease-out;
 }
 
 .menu-nav .nav_active {
