@@ -2,6 +2,18 @@ let menuBtn = document.getElementById('menu_btn');
 let navBar = document.getElementById('menu_nv');
 let sections = document.querySelectorAll('section[id]');
 
+window.onload = () => {
+    setTimeout(async () => {
+        const loaderScreen = await document.getElementById('loader');
+        const otherHidden = await document.querySelectorAll('.hidden');
+        otherHidden.forEach(element => {
+            element.classList.remove('hidden');
+        });
+        loaderScreen.classList.add('hidden');
+    }, 2000);
+};
+
+
 menuBtn.addEventListener("click", () => {
     navBar.classList.toggle('power-on');
     if (menuBtn.innerHTML == '<span class="material-icons">close</span>') {

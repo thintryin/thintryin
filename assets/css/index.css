@@ -1199,3 +1199,8 @@ ul {
 .client {
     height: 300px;
 }
+
+.hidden {
+    display: none !important;
+    transition: display 0.3s ease-out;
+}

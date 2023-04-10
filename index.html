@@ -27,6 +27,78 @@
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <title>Transform Your Digital Presence with Thintry's Expert Crafting Skills - Thintry</title>
+    <!-- Loader style -->
+    <style>
+        .loading-screen {
+            width: 100vw;
+            height: 100vh;
+            background-color: #001220;
+            position: fixed;
+            z-index: 9999999;
+            top: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading {
+            width: 40px;
+            /* 80px / 2 */
+            display: flex;
+            flex-wrap: wrap;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading span {
+            width: 16px;
+            /* 32px / 2 */
+            height: 16px;
+            /* 32px / 2 */
+            background-color: #ff5252;
+            margin: 1.5px;
+            /* 3px / 2 */
+            animation: scale 1.5s linear infinite;
+        }
+
+        @keyframes scale {
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .loading span:nth-child(1) {
+            border-radius: 50% 50% 0 50%;
+            background-color: #ff5252;
+            transform-origin: bottom right;
+        }
+
+        .loading span:nth-child(2) {
+            border-radius: 50% 50% 50% 0;
+            background-color: #ff5252;
+            transform-origin: bottom left;
+            animation-delay: .5s;
+        }
+
+        .loading span:nth-child(3) {
+            border-radius: 50% 0 50% 50%;
+            background-color: #ff5252;
+            transform-origin: top right;
+            animation-delay: 1.5s;
+        }
+
+        .loading span:nth-child(4) {
+            border-radius: 0 50% 50% 50%;
+            background-color: #ff5252;
+            transform-origin: top left;
+            animation-delay: 1s;
+        }
+    </style>
     <!-- Set font for the page -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <!-- Set bootstrap for the page -->
@@ -54,7 +126,7 @@
 
 <body>
     <!-- Header starts -->
-    <header class="navigation header">
+    <header class="navigation header hidden">
         <div class="banner">
             <a href="#start" class="navbar-brand">
                 <img loading="prelaod" decoding="async" class="img-fluid" src="./assets/img/banner.png"
@@ -83,7 +155,7 @@
     </header>
     <!-- Header ends -->
     <!-- Menu starts -->
-    <nav class="menu-nav " id="menu_nv">
+    <nav class="menu-nav hidden" id="menu_nv">
         <a href="#start" class="start">HOME</a>
         <a href="#aboutus" class="aboutus">ABOUT US</a>
         <a href="#services" class="services">SERVICES</a>
@@ -93,7 +165,7 @@
     </nav>
     <!-- Menu ends -->
     <!-- Landing starts -->
-    <section id="start" class="banneer cont bg-tertiary position-relative overflow-hidden hero_bg">
+    <section id="start" class="banneer cont bg-tertiary position-relative overflow-hidden hero_bg hidden">
         <div class="container">
             <div class="contentarea">
                 <div class="conte">
@@ -108,7 +180,7 @@
     </section>
     <!-- Landing ends -->
     <!-- About us starts -->
-    <section id="aboutus">
+    <section id="aboutus" class="hidden">
         <div class="feat bg-gray pt-5 pb-5">
             <div class="container">
                 <div class="row">
@@ -128,7 +200,7 @@
     </section>
     <!-- About us ends -->
     <!-- Works starts -->
-    <section id="services">
+    <section id="services" class="hidden">
         <div class="feat bg-gray pt-5 pb-5">
             <div class="container">
                 <div class="row">
@@ -220,7 +292,7 @@
     </section>-->
     <!-- Works demo ends -->
     <!-- Teams starts -->
-    <section id="teams">
+    <section id="teams" class="hidden">
         <div class="container">
             <div class="row">
                 <div class="section-head col-sm-12">
@@ -424,7 +496,7 @@
     </section>
     <!-- Teams ends -->
     <!-- Contact starts -->
-    <section id="contact">
+    <section id="contact" class="hidden">
         <div class="container">
             <div class="row">
                 <div class="section-head col-sm-12">
@@ -465,7 +537,7 @@
     </section>
     <!-- Contact ends -->
     <!-- Our partners starts -->
-    <div class="container client">
+    <div class="container client hidden">
         <div class="section-head col-sm-12">
             <h4><span>Our</span> Partners</h4>
         </div>
@@ -484,7 +556,7 @@
     </div>
     <!-- Our partners ends -->
     <!-- Our clients starts -->
-    <div class="container client">
+    <div class="container client hidden">
         <div class="section-head col-sm-12">
             <h4><span>Our</span> Clients</h4>
         </div>
@@ -503,7 +575,7 @@
     </div>
     <!-- Our clients ends -->
     <!-- Footer starts -->
-    <section id="footer">
+    <section id="footer" class="hidden">
         <footer id="footer" class="footer">
             <div class="footer-newsletter">
                 <div class="container">
@@ -570,6 +642,16 @@
         </footer>
     </section>
     <!-- Footer ends -->
+    <!-- Loader starts -->
+    <div id="loader" class="loading-screen">
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- Loader ends -->
     <!-- Set script for the page -->
     <script src="./assets/js/index.js"></script>
     <!-- Vendor JS Files -->
