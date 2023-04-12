@@ -27,6 +27,78 @@
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <title>Privacy Policy - Thintry</title>
+    <!-- Loader style -->
+    <style>
+        .loading-screen {
+            width: 100vw;
+            height: 100%;
+            background-color: #fff;
+            position: fixed;
+            z-index: 9999999;
+            top: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading {
+            width: 40px;
+            /* 80px / 2 */
+            display: flex;
+            flex-wrap: wrap;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading span {
+            width: 16px;
+            /* 32px / 2 */
+            height: 16px;
+            /* 32px / 2 */
+            background-color: #ff5252;
+            margin: 1.5px;
+            /* 3px / 2 */
+            animation: scale 1.5s linear infinite;
+        }
+
+        @keyframes scale {
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .loading span:nth-child(1) {
+            border-radius: 50% 50% 0 50%;
+            background-color: #ff5252;
+            transform-origin: bottom right;
+        }
+
+        .loading span:nth-child(2) {
+            border-radius: 50% 50% 50% 0;
+            background-color: #ff5252;
+            transform-origin: bottom left;
+            animation-delay: .5s;
+        }
+
+        .loading span:nth-child(3) {
+            border-radius: 50% 0 50% 50%;
+            background-color: #ff5252;
+            transform-origin: top right;
+            animation-delay: 1.5s;
+        }
+
+        .loading span:nth-child(4) {
+            border-radius: 0 50% 50% 50%;
+            background-color: #ff5252;
+            transform-origin: top left;
+            animation-delay: 1s;
+        }
+    </style>
     <!-- Set font for the page -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <!-- Set bootstrap for the page -->
@@ -216,6 +288,16 @@
         </footer>
     </section>
     <!-- Footer ends -->
+    <!-- Loader starts -->
+    <div id="loader" class="loading-screen">
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- Loader ends -->
     <!-- Set script for the page -->
     <script src="./assets/js/index.js"></script>
     <!-- Vendor JS Files -->
