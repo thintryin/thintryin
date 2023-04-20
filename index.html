@@ -685,11 +685,8 @@
                         last_name: last_name,
                         content: content
                     },
-                    success: function (response) {
-                        alert("Conact form submitted successfully");
-                    },
-                    error: function (xhr, status, error) {
-                        alert("Error submitting contact form");
+                    success: function () {
+                        location.reload();
                     }
                 });
             });
