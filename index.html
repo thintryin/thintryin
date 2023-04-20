@@ -259,7 +259,8 @@
                     </div>
                     <div class="col-lg-4 col-sm-6" id="wdp">
                         <div class="item">
-                            <span class="icon feature_box_col_one"><i class="bx bxl-wordpress" style="font-size: 24px;"></i></span>
+                            <span class="icon feature_box_col_one"><i class="bx bxl-wordpress"
+                                    style="font-size: 24px;"></i></span>
                             <h6>Wordpress Development</h6>
                             <p>Creating custom, scalable websites with powerful CMS using WordPress.</p>
                         </div>
@@ -274,7 +275,7 @@
                     <div class="col-lg-4 col-sm-6" id="webdev">
                         <div class="item"> <span class="icon feature_box_col_five"><i
                                     class="material-icons">toggle_off</i></span>
-                            <h6>Ui /    Ux Designing</h6>
+                            <h6>Ui / Ux Designing</h6>
                             <p>Crafting intuitive digital experiences for seamless user interaction.</p>
                         </div>
                     </div>
@@ -519,7 +520,7 @@
                     <h4><span>Contact</span> Us</h4>
                 </div>
                 <div class="contactForm">
-                    <div>
+                    <div class="form">
                         <div class="inputGroup inputGroup1">
                             <input class="inputGroup__textfield" type="text" id="first_name" name="first_name" value=""
                                 placeholder="Firstname*" required data-value-missing="Please fill out this field.">
@@ -531,12 +532,12 @@
                         </div>
 
                         <div class="inputGroup inputGroup5">
-                            <input class="inputGroup__textfield" type="text" id="email" name="email" value="" placeholder="Email*"
-                                required data-value-missing="Please fill out this field.">
+                            <input class="inputGroup__textfield" type="text" id="email" name="email" value=""
+                                placeholder="Email*" required data-value-missing="Please fill out this field.">
                         </div>
 
                         <div class="inputGroup inputGroup6">
-                            <textarea class="inputGroup__textfield" id="content name="content" rows="8"
+                            <textarea class="inputGroup__textfield" id="content name=" content" rows="8"
                                 placeholder="How can we help?*" required
                                 data-value-missing="Please fill out this field."></textarea>
                         </div>
@@ -668,6 +669,32 @@
         </div>
     </div>
     <!-- Loader ends -->
+    <script>
+        $(document).ready(function () {
+            $("#submit-btn").click(function () {
+                var email = $("#email-input").val();
+                var first_name = $("#first_name").val();
+                var last_name = $("#last_name").val();
+                var content = $("#content").val();
+                $.ajax({
+                    url: "https://mailer.spotitinc.repl.co/",
+                    method: "POST",
+                    data: {
+                        email: email,
+                        first_name: first_name,
+                        last_name: last_name,
+                        content: content
+                    },
+                    success: function (response) {
+                        alert("Conact form submitted successfully");
+                    },
+                    error: function (xhr, status, error) {
+                        alert("Error submitting contact form");
+                    }
+                });
+            });
+        });
+    </script>
     <!-- Set script for the page -->
     <script src="./assets/js/index.js"></script>
     <!-- Vendor JS Files -->

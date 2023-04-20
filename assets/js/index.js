@@ -79,28 +79,5 @@ $(document).ready(function () {
     });
 }); 
 
-$(document).ready(function(){
-    $("#submit-btn").click(function(){
-      var email = $("#email-input").val();
-      var first_name = $("#first_name").val();
-      var last_name = $("#last_name").val();
-      var content = $("#content").val();
-      $.ajax({
-        url: "https://mailer.spotitinc.repl.co/",
-        method: "POST",
-        data: {
-            email: email,
-            first_name: first_name,
-            last_name: last_name,
-            content: content
-        },
-        success: function(response){
-          alert("Conact form submitted successfully");
-        },
-        error: function(xhr, status, error){
-          alert("Error submitting contact form");
-        }
-      });
-    });
-  });
+
   

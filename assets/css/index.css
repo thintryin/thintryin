@@ -955,7 +955,7 @@ ul {
 }
 
 /* STYLES FOR FORM */
-.contactForm form {
+.contactForm .form {
     width: 100%;
     display: grid;
     grid-gap: 30px;
@@ -1073,12 +1073,12 @@ ul {
 
 
 @media screen and (max-width: 480px) {
-    form {
+    .form {
         display: flex !important;
         flex-wrap: wrap;
     }
 
-    form>div {
+    .form>div {
         margin-bottom: 30px;
     }
 }
