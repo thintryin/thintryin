@@ -537,7 +537,7 @@
                         </div>
 
                         <div class="inputGroup inputGroup6">
-                            <textarea class="inputGroup__textfield" id="content name=" content" rows="8"
+                            <textarea class="inputGroup__textfield" id="content" name="content" rows="8"
                                 placeholder="How can we help?*" required
                                 data-value-missing="Please fill out this field."></textarea>
                         </div>
@@ -684,11 +684,9 @@
                         first_name: first_name,
                         last_name: last_name,
                         content: content
-                    },
-                    success: function () {
-                        location.reload();
                     }
                 });
+                location.reload();
             });
         });
     </script>
