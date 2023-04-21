@@ -10,7 +10,7 @@ window.onload = async () => {
     setTimeout(async () => {
         const loaderScreen = await document.getElementById('loader');
         loaderScreen.classList.add('hidden');
-    }, 2000);
+    }, 1500);
 };
 
 
