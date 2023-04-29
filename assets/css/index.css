@@ -176,9 +176,8 @@ button:active:focus {
 
 .hero_bg {
     width: 100%;
-    background: url('../img/pattern.svg') fixed;
+    background: url('../img/blob.svg') fixed;
     background-size: 100vh;
-    backdrop-filter: blur(5px);
 }
 
 .contentarea {
