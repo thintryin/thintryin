@@ -2,17 +2,6 @@ let menuBtn = document.getElementById('menu_btn');
 let navBar = document.getElementById('menu_nv');
 let sections = document.querySelectorAll('section[id]');
 
-window.onload = async () => {
-    const otherHidden = await document.querySelectorAll('.hidden');
-    otherHidden.forEach(element => {
-        element.classList.remove('hidden');
-    });
-    setTimeout(async () => {
-        const loaderScreen = await document.getElementById('loader');
-        loaderScreen.classList.add('hidden');
-    }, 1500);
-};
-
 
 menuBtn.addEventListener("click", () => {
     navBar.classList.toggle('power-on');
