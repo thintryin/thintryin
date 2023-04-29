@@ -2,6 +2,21 @@ let menuBtn = document.getElementById('menu_btn');
 let navBar = document.getElementById('menu_nv');
 let sections = document.querySelectorAll('section[id]');
 
+window.addEventListener('scroll', function () {
+    var header = document.querySelector('.header');
+    var menuNav = document.querySelector('.menu-nav');
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > 600) {
+        header.classList.add('activeHead')
+        menuNav.classList.add('activeHead')
+    } else {
+        header.classList.remove('activeHead')
+        menuNav.classList.remove('activeHead')
+    }
+});
+
+
 
 menuBtn.addEventListener("click", () => {
     navBar.classList.toggle('power-on');
@@ -66,7 +81,6 @@ $(document).ready(function () {
             }
         }]
     });
-}); 
+});
 
 
-  

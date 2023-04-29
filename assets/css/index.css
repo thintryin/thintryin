@@ -33,6 +33,11 @@ input {
     z-index: 999;
     background: #0000003a;
     backdrop-filter: blur(5px);
+    transition: background 0.3s ease-in;
+}
+
+.activeHead{
+    background: #001220;
 }
 
 .header .banner {
@@ -109,6 +114,7 @@ button:active:focus {
     background: #0000003a;
     backdrop-filter: blur(5px);
     z-index: 999;
+    transition: background 0.3s ease-in;
 }
 
 .menu-nav.power-on {
@@ -242,13 +248,13 @@ button:active:focus {
     background-color: transparent;
     color: #001220;
     transition: background-color 0.3s ease-in;
-    border: 2px solid #001220;
+    border: 1px solid #001220;
     outline: none;
 }
 
 .banneer .btn:hover {
     background-color: #001220;
-    color: #ffff;
+    color: #fff;
     border: none;
 }
 
