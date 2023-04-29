@@ -37,7 +37,7 @@ input {
 }
 
 .activeHead{
-    background: #001220;
+    background: #001220 !important;
 }
 
 .header .banner {
