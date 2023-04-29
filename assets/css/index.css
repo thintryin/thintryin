@@ -176,7 +176,7 @@ button:active:focus {
 
 .hero_bg {
     width: 100%;
-    background-color: #623965;
+    background: linear-gradient(#623965, #ff5252);
     background-size: 100vh;
 }
 
@@ -210,12 +210,10 @@ button:active:focus {
 .banneer .btn {
     width: 200px;
     height: 45px;
-    color: #001220;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 100px;
-    border: none;
+    border-radius: 0px;
 }
 
 @media (max-width: 534px) {
@@ -237,18 +235,21 @@ button:active:focus {
 }
 
 .banneer p {
-    color: #c0c0c0;
+    color: #001220;
 }
 
-.btn {
-    background-color: #ff5252 !important;
-    color: #001220 !important;
-    transition: background-color 0.3s ease-in-out;
+.banneer .btn {
+    background-color: transparent;
+    color: #001220;
+    transition: background-color 0.3s ease-in;
+    border: 2px solid #001220;
+    outline: none;
 }
 
-.btn:hover {
-    background-color: #fa7f7f !important;
-    color: #001220 !important;
+.banneer .btn:hover {
+    background-color: #001220;
+    color: #ffff;
+    border: none;
 }
 
 .banneer {
