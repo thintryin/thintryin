@@ -1018,7 +1018,7 @@ body#layout #hidden{display:none!important}
       </b:if>
       <meta expr:content='data:view.title.escaped' property='og:title'/>
       <meta expr:content='data:blog.title.escaped' property='og:site_name'/>
-      <meta expr:content='data:view.description.escaped' property='og:description'/>
+      <meta expr:content='data:view.description.escaped' property='description'/>
       <meta expr:content='data:blog.url.canonical' property='og:url'/>
       <b:tag cond='data:view.isMultipleItems and data:widgets.Blog.first.posts[0].featuredImage' expr:content='data:widgets.Blog.first.posts[0].featuredImage resizeImage 1600' name='meta' property='og:image'/>
       <b:tag cond='data:view.featuredImage' expr:content='data:view.featuredImage resizeImage 1600' name='meta' property='og:image'/>
