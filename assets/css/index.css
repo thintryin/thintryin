@@ -245,15 +245,15 @@ button:active:focus {
 }
 
 .banneer .btn {
-    background-color: transparent;
-    color: #001220;
+    background-color: #001220;
+    color: #fff;
     transition: background-color 0.3s ease-in;
-    border: 1px solid #001220;
+    border: none;
     outline: none;
 }
 
 .banneer .btn:hover {
-    background-color: #001220;
+    background-color: #002c4e;
     color: #fff;
     border: none;
 }
