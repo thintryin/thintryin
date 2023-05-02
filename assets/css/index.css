@@ -182,8 +182,8 @@ button:active:focus {
 
 .hero_bg {
     width: 100%;
-    background: linear-gradient(#623965, #ff5252);
-    background-size: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/bg2.webp') no-repeat;
+    background-size: cover;
 }
 
 .contentarea {
@@ -241,20 +241,21 @@ button:active:focus {
 }
 
 .banneer p {
-    color: #001220;
+    color: #ff5252;
 }
 
 .banneer .btn {
-    background-color: #001220;
-    color: #fff;
+    background-color: #ff5252;
+    color: #001220;
     transition: background-color 0.3s ease-in;
     border: none;
     outline: none;
+    border-radius: 5px;
 }
 
 .banneer .btn:hover {
-    background-color: #002c4e;
-    color: #fff;
+    background-color: #fd8787;
+    color: #001220;
     border: none;
 }
 
