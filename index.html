@@ -661,11 +661,14 @@
                         first_name: first_name,
                         last_name: last_name,
                         content: content
+                    },
+                    success: () => {
+                        alert('Contat form submitted successfully.');
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert('Error submiting form: ' + errorThrown);
                     }
                 });
-                setTimeout(() => {
-                    location.reload();
-                }, 1000);
             });
         });
     </script>
