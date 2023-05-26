@@ -519,15 +519,10 @@
                     <h4><span>Contact</span> Us</h4>
                 </div>
                 <div class="contactForm">
-                    <div class="form">
+                    <form class="form" action="./plugins/mailer.php>
                         <div class="inputGroup inputGroup1">
-                            <input class="inputGroup__textfield" type="text" id="first_name" name="first_name" value=""
-                                placeholder="Firstname*" required data-value-missing="Please fill out this field.">
-                        </div>
-
-                        <div class="inputGroup inputGroup2">
-                            <input class="inputGroup__textfield" type="text" id="last_name" name="last_name" value=""
-                                placeholder="Lastname*" required data-value-missing="Please fill out this field.">
+                            <input class="inputGroup__textfield" type="text" id="first_name" name="name" value=""
+                                placeholder="Fullname*" required data-value-missing="Please fill out this field.">
                         </div>
 
                         <div class="inputGroup inputGroup5">
@@ -546,7 +541,7 @@
                                 <i class='material-icons'>send</i>
                             </button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
