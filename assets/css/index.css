@@ -182,7 +182,7 @@ button:active:focus {
 
 .hero_bg {
     width: 100%;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/bg2.webp') no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/pixel-bg.png') no-repeat;
     background-size: cover;
 }
 
