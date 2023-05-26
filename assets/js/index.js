@@ -29,7 +29,7 @@ menuBtn.addEventListener("click", () => {
 
 const hideNav = () => {
     navBar.classList.remove('power-on');
-    menuBtn.innerHTML = '<span class="material-icons">menu</span>';
+    menuBtn.innerHTML = '<span class="bx bx-menu"></span>';
 }
 
 const changeClass = (className) => {
