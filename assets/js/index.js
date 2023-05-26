@@ -21,7 +21,7 @@ window.addEventListener('scroll', function () {
 menuBtn.addEventListener("click", () => {
     navBar.classList.toggle('power-on');
     if (menuBtn.innerHTML == '<span class="material-icons">close</span>') {
-        menuBtn.innerHTML = '<box-icon name="menu"></box-icon>';
+        menuBtn.innerHTML = '<span class="bx bx-menu"></span>';
     } else {
         menuBtn.innerHTML = '<span class="material-icons">close</span>';
     }
