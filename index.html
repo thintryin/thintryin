@@ -653,32 +653,6 @@
         </footer>
     </section>
     <!-- Footer ends -->
-    <script>
-        $(document).ready(function () {
-            $("#submit-btn").click(function () {
-                var email = $("#email").val();
-                var first_name = $("#first_name").val();
-                var last_name = $("#last_name").val();
-                var content = $("#content").val();
-                $.ajax({
-                    url: "https://mailer.spotitinc.repl.co/",
-                    method: "POST",
-                    data: {
-                        email: email,
-                        first_name: first_name,
-                        last_name: last_name,
-                        content: content
-                    },
-                    success: () => {
-                        alert('Contat form submitted successfully.');
-                    },
-                    error: (xhr, textStatus, errorThrown) => {
-                        alert('Error submiting form: ' + errorThrown);
-                    }
-                });
-            });
-        });
-    </script>
     <!-- Set script for the page -->
     <script src="./assets/js/index.js"></script>
     <!--<script data-cfasync="false" type="text/javascript" data-adel="atag" src="//acacdn.com/script/atg.js" czid="mhfhb2epa3"></script>-->

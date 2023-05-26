@@ -8,7 +8,7 @@ $email= $_POST['email'];
 
 $message= $_POST['content'];
 
-$to = "connect@thintry.com";
+$to = "mrsajadpp@gmail.com";
 
 $subject = "Mail From website";
 
