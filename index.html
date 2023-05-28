@@ -715,7 +715,7 @@
         function sendEmail(event) {
             event.preventDefault();
 
-            const name = document.getElementById('first_name').value;
+            const name = document.getElementById('first_name').value + document.getElementById('last_name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
