@@ -1217,21 +1217,14 @@ ul {
     transition: display 0.3s ease-out;
 }
 
-* {
-    box-sizing: border-box;
+#gallery {
+    padding: 5px;
 }
 
 .containe {
     width: 85%;
     max-width: 850px;
     margin: 0 auto;
-}
-
-header {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1rem;
-    padding: 2em;
 }
 
 .row {
