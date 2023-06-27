@@ -108,7 +108,7 @@ button:active:focus {
     position: fixed;
     flex-direction: column;
     justify-content: flex-start;
-    top: 60px;
+    top: 70px;
     width: 100%;
     max-height: 0;
     overflow: hidden;
@@ -180,8 +180,9 @@ button:active:focus {
     width: 100vw;
     background-color: #001220;
     display: flex;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/pixel-bg.webp') no-repeat;
-    background-size: cover;
+    background-color: #fff;
+    /*background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/pixel-bg.webp') no-repeat;
+    background-size: cover;*/
 }
 
 .hero_bg {
